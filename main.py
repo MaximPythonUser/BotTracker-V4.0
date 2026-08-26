@@ -422,7 +422,6 @@ async def process_calendar_selection(
     calendar = SimpleCalendar(locale="ru")
     selected, date = await calendar.process_selection(callback, callback_data)
 
-    # Пользователь листал месяцы/годы — выбор ещё не сделан
     if not selected:
         await callback.answer()
         return
